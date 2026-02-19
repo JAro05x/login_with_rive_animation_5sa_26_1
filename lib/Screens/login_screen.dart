@@ -17,6 +17,35 @@ class _LoginScreenState extends State<LoginScreen> {
   SMITrigger? _trigSuccess;
   SMITrigger? _trigFail;
 
+  // 1-Crear variables para FocusNode
+  final _emailFocusNode = FocusNode();
+  final _passwordFocusNode = FocusNode();
+
+  // 2-Listeners (chismosos) para FocusNode
+  @override 
+  void initState() {
+    super.initState();
+
+    _emailFocusNode.addListener(() {
+      if (_emailFocusNode.hasFocus) {
+        // Verifica que no sea nulo antes de llamar a change
+        _isHandsUp?.change(false);
+        _isChecking?.change(true);
+      } else {
+        // Si el campo de email pierde el foco, puedes resetear los estados
+        _isChecking?.change(false);
+      }
+    });
+
+    _passwordFocusNode.addListener(() {
+      if (_passwordFocusNode.hasFocus) {
+        _isChecking?.change(false);
+        // Manos arriba cuando el campo de contraseña tiene el foco
+        _isHandsUp?.change(true);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -61,6 +90,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
               // EMAIL
               TextField(
+                //3- Asignar FocusNode al TextField
+                focusNode: _emailFocusNode,
                 onChanged: (value) {
                   if (value.isNotEmpty) {
                     _isHandsUp?.change(false);
@@ -82,6 +113,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
               // PASSWORD
               TextField(
+                //3- Asignar FocusNode al TextField
+                focusNode: _passwordFocusNode,
                 obscureText: _obscureText,
                 onChanged: (value) {
                   _isChecking?.change(false);
@@ -133,5 +166,12 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+  // 4- Liberar memoria al salir de la pantalla
+  @override 
+  void dispose() {
+    _emailFocusNode.dispose();
+    _passwordFocusNode.dispose();
+    super.dispose();
   }
 }
