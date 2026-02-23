@@ -176,7 +176,7 @@ StateMachineController.fromArtboard(
 ## 📚 Project Information
 
 - **Course:** Graficación  
-- **Instructor:** RODRIGO FIDEL GAXIOLA SOSA  
+- **Instructor:** Rodrigo Fidel Gaxiola Sosa 
 - **Rive Animation Credits:** https://rive.app/marketplace/3645-7621-remix-of-login-machine/  
 - **Student:** José Antonio Rosado Osorio  
 
