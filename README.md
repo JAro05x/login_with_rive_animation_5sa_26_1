@@ -1,20 +1,26 @@
-🎯 Flutter Login Animation con Rive
+# 🎯 Flutter Login Animation con Rive
 
-Aplicación desarrollada en Flutter (Dart) que implementa una pantalla de inicio de sesión animada utilizando Rive para integrar animaciones interactivas y mejorar la experiencia del usuario.
+Aplicación desarrollada en **Flutter (Dart)** que implementa una pantalla de inicio de sesión animada utilizando **Rive** para integrar animaciones interactivas y mejorar la experiencia del usuario.
 
-📱 Descripción del Proyecto
+---
 
-Este proyecto consiste en una interfaz de login moderna e interactiva donde se utiliza una animación creada en Rive que responde dinámicamente a las acciones del usuario.
+## 📱 Descripción del Proyecto
+
+Este proyecto consiste en una interfaz de login moderna e interactiva donde se utiliza una animación creada en **Rive** que responde dinámicamente a las acciones del usuario.
 
 La animación cambia de estado dependiendo de la interacción con los campos de texto (por ejemplo: cuando el usuario escribe el correo, cuando ingresa la contraseña o cuando se activa una validación).
 
 El propósito principal del proyecto fue comprender cómo integrar animaciones avanzadas en Flutter y conectarlas con la lógica de la aplicación.
 
-🎥 Demo del Proyecto
+---
+
+## 🎥 Demo del Proyecto
 
 ![Demo Login](gif_proyecto.gif)
 
-🖼️ Capturas de Pantalla
+---
+
+## 🖼️ Capturas de Pantalla
 
 ![Pantalla Principal](Principal.png)
 
@@ -22,20 +28,33 @@ El propósito principal del proyecto fue comprender cómo integrar animaciones a
 
 ![Interacción Password](Password.png)
 
-🛠️ Tecnologías Utilizadas
-💙 Flutter
-🎯 Dart
-🎨 Rive
-📱 Material Design
+---
 
-📦 Dependencias Principales
+## 🛠️ Tecnologías Utilizadas
 
+- 💙 Flutter  
+- 🎯 Dart  
+- 🎨 Rive  
+- 📱 Material Design  
+
+---
+
+## 📦 Dependencias Principales
+
+```
+yaml
 dependencies:
   flutter:
     sdk: flutter
   rive: ^0.x.x
-📍 Estructura del Proyecto
-📂 login_with_rive_animations_5SA_26_1/
+```
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+📂 login_with_rive_animation_5sa_26_1/
  ├── lib/
  │   ├── main.dart
  │   ├── login_screen.dart
@@ -46,92 +65,114 @@ dependencies:
  │
  ├── pubspec.yaml
  ├── README.md
-🚀 Instalación y Ejecución
+```
 
-Clonar el repositorio:
+---
 
--git clone: https://github.com/JAro05x/login_with_rive_animation_5sa_26_1.git
+## 🚀 Instalación y Ejecución
 
--Entrar al directorio del proyecto
+### 1️⃣ Clonar el repositorio
 
--Instalar dependencias: flutter pub get
+```
+bash
+git clone https://github.com/JAro05x/login_with_rive_animation_5sa_26_1.git
+```
 
--Ejecutar la aplicación: flutter run
+### 2️⃣ Entrar al directorio del proyecto
 
-🎨 Implementación de Rive
+```
+bash
+cd login_with_rive_animation_5sa_26_1
+```
+
+### 3️⃣ Instalar dependencias
+
+```bash
+flutter pub get
+```
+
+### 4️⃣ Ejecutar la aplicación
+
+```bash
+flutter run
+```
+
+---
+
+## 🎨 Implementación de Rive
 
 La animación se carga desde los assets utilizando:
 
+```
+dart
 RiveAnimation.asset(
   'assets/animations/archivo_animacion.riv',
   fit: BoxFit.cover,
 )
+```
 
-Se utiliza un StateMachineController para manipular los estados de la animación dependiendo de la interacción del usuario.
+Se utiliza un `StateMachineController` para manipular los estados de la animación dependiendo de la interacción del usuario.
 
 Ejemplo general de controlador:
 
+```
+dart
 StateMachineController.fromArtboard(
   artboard,
   'State Machine Name',
 );
+```
 
-Esto permite:
+### Esto permite:
 
--Activar animaciones cuando el usuario interactúa con los campos.
+- Activar animaciones cuando el usuario interactúa con los campos.
+- Cambiar estados booleanos dentro de la máquina de estados.
+- Disparar triggers de animación.
+- Controlar la lógica visual desde el código Dart.
 
--Cambiar estados booleanos dentro de la máquina de estados.
+---
 
--Disparar triggers de animación.
+## 🧠 Funcionamiento General
 
--Controlar la lógica visual desde el código Dart.
+- La aplicación inicia desde `main.dart`.
+- Se carga la pantalla de login.
+- Se inicializa la animación de Rive.
+- Se conecta el controlador de la máquina de estados.
+- La animación responde dinámicamente a la interacción del usuario.
 
-🧠 Funcionamiento General
+---
 
--La aplicación inicia desde main.dart.
+## 🎯 Objetivos del Proyecto
 
--Se carga la pantalla de login.
+- Integrar animaciones interactivas con Rive en Flutter.
+- Conectar la lógica de la aplicación con estados visuales.
+- Diseñar una interfaz atractiva y moderna.
+- Practicar estructura y organización de proyectos Flutter.
 
--Se inicializa la animación de Rive.
+---
 
--Se conecta el controlador de la máquina de estados.
+## 🧠 Aprendizajes Obtenidos
 
--La animación responde dinámicamente a la interacción del usuario.
+- Cómo importar y configurar archivos `.riv`.
+- Cómo trabajar con `StateMachineController`.
+- Cómo conectar inputs y triggers de Rive con eventos en Flutter.
+- Organización de archivos en un proyecto Flutter.
+- Manejo de assets y dependencias.
 
-🎯 Objetivos del Proyecto
+---
 
--Integrar animaciones interactivas con Rive en Flutter.
+## 🔮 Posibles Mejoras Futuras
 
--Conectar la lógica de la aplicación con estados visuales.
+- Implementar validación real conectada a un backend.
+- Agregar navegación a una pantalla principal después del login.
+- Hacer la interfaz responsiva para distintos tamaños de pantalla.
+- Añadir animaciones adicionales para errores o éxito.
+- Optimizar arquitectura usando patrones como Provider o Bloc.
 
--Diseñar una interfaz atractiva y moderna.
+---
 
--Practicar estructura y organización de proyectos Flutter.
+## 👨‍💻 Autor
 
-🧠 Aprendizajes Obtenidos
+**José Antonio Rosado Osorio**
 
--Cómo importar y configurar archivos .riv.
-
--Cómo trabajar con StateMachineController.
-
--Cómo conectar inputs y triggers de Rive con eventos en Flutter.
-
--Organización de archivos en un proyecto Flutter.
-
--Manejo de assets y dependencias.
-
-🔮 Posibles Mejoras Futuras
-
--Implementar validación real conectada a un backend.
-
--Agregar navegación a una pantalla principal después del login.
-
--Hacer la interfaz responsiva para distintos tamaños de pantalla.
-
--Añadir animaciones adicionales para errores o éxito.
-
--Optimizar arquitectura usando patrones como Provider o Bloc.
-
-👨‍💻 Autor
-
-José Antonio Rosado Osorio
+---
