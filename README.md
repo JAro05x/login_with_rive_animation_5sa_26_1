@@ -16,7 +16,7 @@ El propósito principal del proyecto fue comprender cómo integrar animaciones a
 
 ## 🎥 Demo del Proyecto
 
-![Demo Login](gif_proyecto.gif)
+<img src="gif_proyecto.gif" width="600">
 
 ---
 
