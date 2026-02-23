@@ -1,36 +1,36 @@
-# 🎯 Flutter Login Animation con Rive
+# 🎯 Flutter Login Animation with Rive
 
-Aplicación desarrollada en **Flutter (Dart)** que implementa una pantalla de inicio de sesión animada utilizando **Rive** para integrar animaciones interactivas y mejorar la experiencia del usuario.
-
----
-
-## 📱 Descripción del Proyecto
-
-Este proyecto consiste en una interfaz de login moderna e interactiva donde se utiliza una animación creada en **Rive** que responde dinámicamente a las acciones del usuario.
-
-La animación cambia de estado dependiendo de la interacción con los campos de texto (por ejemplo: cuando el usuario escribe el correo, cuando ingresa la contraseña o cuando se activa una validación).
-
-El propósito principal del proyecto fue comprender cómo integrar animaciones avanzadas en Flutter y conectarlas con la lógica de la aplicación.
+Application developed in **Flutter (Dart)** that implements an animated login screen using **Rive** to integrate interactive animations and enhance the user experience.
 
 ---
 
-## 🎥 Demo del Proyecto
+## 📱 Project Description
+
+This project consists of a modern and interactive login interface where a **Rive** animation dynamically responds to user actions.
+
+The animation changes state depending on user interaction with the text fields (for example: when the user types the email, enters the password, or triggers validation).
+
+The main purpose of this project was to understand how to integrate advanced animations in Flutter and connect them with application logic.
+
+---
+
+## 🎥 Project Demo
 
 <img src="gif_proyecto.gif" width="600">
 
 ---
 
-## 🖼️ Capturas de Pantalla
+## 🖼️ Screenshots
 
-![Pantalla Principal](Principal.png)
+![Main Screen](Principal.png)
 
-![Interacción Email](Correo.png)
+![Email Interaction](Correo.png)
 
-![Interacción Password](Password.png)
+![Password Interaction](Password.png)
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
 - 💙 Flutter  
 - 🎯 Dart  
@@ -39,7 +39,7 @@ El propósito principal del proyecto fue comprender cómo integrar animaciones a
 
 ---
 
-## 📦 Dependencias Principales
+## 📦 Main Dependencies
 
 ```
 yaml
@@ -51,7 +51,7 @@ dependencies:
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 📂 login_with_rive_animation_5sa_26_1/
@@ -61,7 +61,7 @@ dependencies:
  │
  ├── assets/
  │   ├── animations/
- │       ├── archivo_animacion.riv
+ │       ├── animation_file.riv
  │
  ├── pubspec.yaml
  ├── README.md
@@ -69,39 +69,41 @@ dependencies:
 
 ---
 
-## 🚀 Instalación y Ejecución
+## 🚀 Installation and Execution
 
-### 1️⃣ Clonar el repositorio
+### 1️⃣ Clone the repository
 
 ```
 bash
 git clone https://github.com/JAro05x/login_with_rive_animation_5sa_26_1.git
 ```
 
-### 2️⃣ Entrar al directorio del proyecto
+### 2️⃣ Enter the project directory
 
 ```
 bash
 cd login_with_rive_animation_5sa_26_1
 ```
 
-### 3️⃣ Instalar dependencias
+### 3️⃣ Install dependencies
 
-```bash
+```
+bash
 flutter pub get
 ```
 
-### 4️⃣ Ejecutar la aplicación
+### 4️⃣ Run the application
 
-```bash
+```
+bash
 flutter run
 ```
 
 ---
 
-## 🎨 Implementación de Rive
+## 🎨 Rive Implementation
 
-La animación se carga desde los assets utilizando:
+The animation is loaded from assets using:
 
 ```
 dart
@@ -111,9 +113,9 @@ RiveAnimation.asset(
 )
 ```
 
-Se utiliza un `StateMachineController` para manipular los estados de la animación dependiendo de la interacción del usuario.
+A `StateMachineController` is used to manipulate animation states depending on user interaction.
 
-Ejemplo general de controlador:
+General controller example:
 
 ```
 dart
@@ -123,56 +125,59 @@ StateMachineController.fromArtboard(
 );
 ```
 
-### Esto permite:
+### This allows:
 
-- Activar animaciones cuando el usuario interactúa con los campos.
-- Cambiar estados booleanos dentro de la máquina de estados.
-- Disparar triggers de animación.
-- Controlar la lógica visual desde el código Dart.
-
----
-
-## 🧠 Funcionamiento General
-
-- La aplicación inicia desde `main.dart`.
-- Se carga la pantalla de login.
-- Se inicializa la animación de Rive.
-- Se conecta el controlador de la máquina de estados.
-- La animación responde dinámicamente a la interacción del usuario.
+- Triggering animations when the user interacts with the fields.
+- Changing boolean states inside the state machine.
+- Triggering animation events.
+- Controlling visual logic directly from Dart code.
 
 ---
 
-## 🎯 Objetivos del Proyecto
+## 🧠 General Functionality
 
-- Integrar animaciones interactivas con Rive en Flutter.
-- Conectar la lógica de la aplicación con estados visuales.
-- Diseñar una interfaz atractiva y moderna.
-- Practicar estructura y organización de proyectos Flutter.
-
----
-
-## 🧠 Aprendizajes Obtenidos
-
-- Cómo importar y configurar archivos `.riv`.
-- Cómo trabajar con `StateMachineController`.
-- Cómo conectar inputs y triggers de Rive con eventos en Flutter.
-- Organización de archivos en un proyecto Flutter.
-- Manejo de assets y dependencias.
+- The application starts from `main.dart`.
+- The login screen is loaded.
+- The Rive animation is initialized.
+- The state machine controller is connected.
+- The animation dynamically responds to user interaction.
 
 ---
 
-## 🔮 Posibles Mejoras Futuras
+## 🎯 Project Objectives
 
-- Implementar validación real conectada a un backend.
-- Agregar navegación a una pantalla principal después del login.
-- Hacer la interfaz responsiva para distintos tamaños de pantalla.
-- Añadir animaciones adicionales para errores o éxito.
-- Optimizar arquitectura usando patrones como Provider o Bloc.
+- Integrate interactive animations with Rive in Flutter.
+- Connect application logic with visual states.
+- Design an attractive and modern interface.
+- Practice Flutter project structure and organization.
 
 ---
 
-## 👨‍💻 Autor
+## 🧠 Key Learnings
 
-**José Antonio Rosado Osorio**
+- How to import and configure `.riv` files.
+- How to work with `StateMachineController`.
+- How to connect Rive inputs and triggers with Flutter events.
+- Project file organization in Flutter.
+- Asset and dependency management.
+
+---
+
+## 🔮 Future Improvements
+
+- Implement real validation connected to a backend.
+- Add navigation to a main screen after login.
+- Make the interface responsive for different screen sizes.
+- Add additional animations for error or success states.
+- Optimize architecture using patterns such as Provider or Bloc.
+
+---
+
+## 📚 Project Information
+
+- **Course:** Graficación  
+- **Instructor:** RODRIGO FIDEL GAXIOLA SOSA  
+- **Rive Animation Credits:** https://rive.app/marketplace/3645-7621-remix-of-login-machine/  
+- **Student:** José Antonio Rosado Osorio  
 
 ---
